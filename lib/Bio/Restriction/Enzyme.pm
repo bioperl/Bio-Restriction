@@ -962,7 +962,7 @@ of the 4 nucleotides has an effective length of 1 - log(n) / log(4).
 
 sub cutter {
     my ($self)=@_;
-    $_ = uc $self->string;
+    local $_ = uc $self->string;
 
     my $cutter = tr/[ATGC]//d;
     my $count =  tr/[MRWSYK]//d;
